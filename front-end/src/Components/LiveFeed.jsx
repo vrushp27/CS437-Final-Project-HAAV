@@ -1,24 +1,62 @@
 import React from 'react';
-import logo from './logo.svg';
-import { RiPhoneLine } from 'react-icons/ri';
-import { AiFillFlag } from 'react-icons/ai';
+import trashIcon from './trash.svg';
 
 function LiveFeed() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 to-pink-700 flex flex-col justify-center items-center">
-      <img src={logo} className="h-40 mb-8 animate-pulse" alt="logo" />
-      <img src={AiFillFlag} className="w-full mb-12" alt="banner" />
-      <h1 className="text-white text-5xl font-bold mb-4">Welcome to the Live Feed</h1>
-      <div className="flex justify-center mt-16">
-        <img src={RiPhoneLine} className="h-96" alt="phone" />
-        <div className="ml-16 text-white">
-          <h2 className="text-4xl font-bold mb-4">Introducing Our App</h2>
-          <p className="text-xl mb-4">Experience the power of Raspberry Pi and Ultrasonic Sensor</p>
-          <ul className="list-disc ml-6">
-            <li className="mb-2">Beautifully designed user interface</li>
-            <li className="mb-2">Seamless performance and stability for the trash can</li>
-            <li>Intuitive and easy to use</li>
-          </ul>
+    <div className="flex flex-col h-full justify-center items-center">
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full md:w-3/4 lg:w-1/2">
+      <div className="bg-gray-800 py-2 px-4 text-white font-bold text-lg">Live Feed</div>
+      <div className="p-4">
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center">
+            <img src={trashIcon} alt="Trash Can Icon" className="w-6 h-6 mr-2" />
+            <div>
+              <p className="text-sm text-gray-800">Trash Can 1</p>
+              <p className="text-xs text-gray-500">Last updated: 2023-04-17 10:30am</p>
+            </div>
+          </div>
+          <p className="text-xs text-green-500">Safe</p>
+        </div>
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center">
+            <img src={trashIcon} alt="Trash Can Icon" className="w-6 h-6 mr-2" />
+            <div>
+              <p className="text-sm text-gray-800">Trash Can 2</p>
+              <p className="text-xs text-gray-500">Last updated: 2023-04-17 10:25am</p>
+            </div>
+          </div>
+          <p className="text-xs text-red-500">Danger</p>
+        </div>
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center">
+            <img src={trashIcon} alt="Trash Can Icon" className="w-6 h-6 mr-2" />
+            <div>
+              <p className="text-sm text-gray-800">Trash Can 3</p>
+              <p className="text-xs text-gray-500">Last updated: 2023-04-17 10:20am</p>
+            </div>
+          </div>
+          <p className="text-xs text-green-500">Safe</p>
+        </div>
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center">
+            <img src={trashIcon} alt="Trash Can Icon" className="w-6 h-6 mr-2" />
+            <div>
+              <p className="text-sm text-gray-800">Trash Can 4</p>
+              <p className="text-xs text-gray-500">Last updated: 2023-04-17 10:15am</p>
+            </div>
+          </div>
+          <p className="text-xs text-yellow-500">Warning</p>
+        </div>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center">
+            <img src={trashIcon} alt="Trash Can Icon" className="w-6 h-6 mr-2" />
+            <div>
+              <p className="text-sm text-gray-800">Trash Can 5</p>
+              <p className="text-xs text-gray-500">Last updated: 2023-04-17 10:10am</p>
+            </div>
+            </div>
+            <p className="text-xs text-green-500">Safe</p>
+          </div>
         </div>
       </div>
     </div>

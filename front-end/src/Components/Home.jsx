@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import logo from './trasher.jpeg';
 import { Link } from "react-router-dom";
-import { RiPhoneLine } from 'react-icons/ri';
-import { AiFillFlag } from 'react-icons/ai';
 
 function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 to-pink-700 flex flex-col justify-center items-center">
       <img src={logo} className="h-40 mb-8 animate-pulse" alt="logo" />
-      <img src={AiFillFlag} className="w-full mb-12" alt="banner" />
       <h1 className="text-white text-5xl font-bold mb-4">Welcome to the Smart Trash Can App</h1>
-      <p className="text-white text-2xl mb-8">Built by HAAV</p>
+      <p className="text-white text-2xl mb-8">Built by HAAV (Heet, Arjun, Adnan, Vrush)</p>
       <div>
         <Link to="/livefeed">
             <button className="bg-white text-purple-900 hover:bg-purple-900 hover:text-white rounded-lg px-8 py-4 font-bold transition duration-300 ease-in-out">Live Feed</button>
         </Link>
+        <div> .  </div>
         </div>
-      <button className="bg-white text-purple-900 hover:bg-purple-900 hover:text-white rounded-lg px-8 py-4 font-bold transition duration-300 ease-in-out">History</button>
-      <div className="flex justify-center mt-16">
-        <img src={RiPhoneLine} className="h-96" alt="phone" />
+        <Link to="/history">
+            <button className="bg-white text-purple-900 hover:bg-purple-900 hover:text-white rounded-lg px-8 py-4 font-bold transition duration-300 ease-in-out">History</button>
+        </Link>      
+        <div className="flex justify-center mt-16">
+        {/* <img src={RiPhoneLine} className="h-96" alt="phone" /> */}
         <div className="ml-16 text-white">
           <h2 className="text-4xl font-bold mb-4">Introducing Our App</h2>
           <p className="text-xl mb-4">Experience the power of Raspberry Pi and Ultrasonic Sensor</p>
@@ -30,7 +30,7 @@ function Home() {
         </div>
       </div>
     </div>
-  )
-};
+  );
+}
 
 export default Home;
