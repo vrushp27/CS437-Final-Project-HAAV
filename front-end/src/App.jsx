@@ -5,6 +5,7 @@ import LiveFeed from './Components/LiveFeed';
 import History from './Components/History';
 import Header from './Components/Shared/Header';
 import Footer from './Components/Shared/Footer';
+import About from './Components/About'
 
 
 
@@ -17,6 +18,7 @@ function App() {
           <Route exact path = '/' element = {<Home />} />
           <Route exact path = '/livefeed' element = {<LiveFeed />} />
           <Route exact path = '/history' element = {<History />}/>
+          <Route exact path = '/about' element = {<About />}/>
           </Routes>
           <Footer />
         </ div>
