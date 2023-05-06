@@ -1,78 +1,10 @@
-export const trashCansData = [
-  {
-    id: 1,
-    name: 'HAAV Sample Can 1',
-    status: 'safe',
-    lastUpdated: '2023-05-01 01:33am',
-    totalCapacity: 50,
-    currentCapacity: 30,
-    lastEmptied: '2023-04-20',
-    numEmpties: 2,
-    currentFillLevel: 60,
-    history: [
-      { timestamp: '2023-04-23 08:20pm', status: 'safe' },
-      { timestamp: '2023-04-17 10:15am', status: 'warning' },
-      { timestamp: '2023-04-17 10:00am', status: 'danger' },
-    ],
-  },
-  {
-    id: 2,
-    name: 'Trash Can Demo #2',
-    status: 'danger',
-    lastUpdated: '2023-04-30 10:26pm',
-    totalCapacity: 70,
-    currentCapacity: 65,
-    lastEmptied: '2023-04-15',
-    numEmpties: 3,
-    currentFillLevel: 93,
-    history: [
-      { timestamp: '2023-04-30 10:25pm', status: 'danger' },
-      { timestamp: '2023-04-30 10:10pm', status: 'warning' },
-      { timestamp: '2023-04-28 9:55pm', status: 'safe' },
-    ],
-  },
-  {
-    id: 3,
-    name: 'Raspberry pi can demo #3',
-    status: 'safe',
-    lastUpdated: '2023-04-17 10:20am',
-    totalCapacity: 40,
-    currentCapacity: 20,
-    lastEmptied: '2023-04-10',
-    numEmpties: 1,
-    currentFillLevel: 50,
-    history: [
-      { timestamp: '2023-04-17 10:20am', status: 'safe' },
-      { timestamp: '2023-04-17 10:05am', status: 'safe' },
-      { timestamp: '2023-04-17 9:50am', status: 'warning' },
-    ],
-  },
-  {
-    id: 4,
-    name: 'Vrushs living room can',
-    status: 'warning',
-    lastUpdated: '2023-04-17 10:15am',
-    totalCapacity: 60,
-    currentCapacity: 40,
-    lastEmptied: '2023-04-18',
-    numEmpties: 2,
-    currentFillLevel: 67,
-    history: [
-      { timestamp: '2023-04-17 10:15am', status: 'warning' },
-      { timestamp: '2023-04-17 10:00am', status: 'safe' },
-      { timestamp: '2023-04-17 9:45am', status: 'safe' },
-    ],
-  },
-  {
-    id: 5,
-    name: 'Garage Room Can',
-    status: 'safe',
-    lastUpdated: '2023-04-17 10:10am',
-    history: [
-      { timestamp: '2023-04-17 10:10am', status: 'safe' },
-      { timestamp: '2023-04-17 9:55am', status: 'safe' },
-      { timestamp: '2023-04-17 9:40am', status: 'safe' },
-    ],
-  },
-];
+export const trashCansData = 
+  fetch('localhost:5000/api/trash-cans')
+  .then(response => response.json())
+  .then(data => {
+    const trashCansData = data;
+    console.log(trashCansData);
+  })
+  .catch(error => console.error(error));
+
 export default trashCansData;
